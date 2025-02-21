@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_instituo_ej4_cicle,instituto.cicle,model_instituto_cicle,base.group_user,1,1,1,1
+access_instituo_ej4_modul,instituto.modul,model_instituto_modul,base.group_user,1,1,1,1
+access_instituo_ej4_alumne,instituto.alumne,model_instituto_alumne,base.group_user,1,1,1,1
+access_instituo_ej4_professor,instituto.professor,model_instituto_professor,base.group_user,1,1,1,1
+

@@ -1,0 +1,37 @@
+<odoo>
+    <record id="view_doctor_form" model="ir.ui.view">
+        <field name="name">Metge Form</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="nombre"/>
+                        <field name="apellidos"/>
+                        <field name="numeroColegiado"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_doctor_tree" model="ir.ui.view">
+        <field name="name">Metge Tree</field>
+        <field name="model">hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre"/>
+                <field name="apellidos"/>
+                <field name="numeroColegiado"/>
+            </tree>
+        </field>
+    </record>
+
+      <record id="action_doctor" model="ir.actions.act_window">
+            <field name="name">Doctores</field>
+            <field name="res_model">hospital.doctor</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+  <menuitem id="hospital_menu" name="Hospital"/>
+    <menuitem id="doctor_menu" name="Metges" parent="hospital_menu" action="action_doctor"/>
+</odoo>

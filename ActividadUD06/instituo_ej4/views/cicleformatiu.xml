@@ -1,0 +1,51 @@
+<odoo>
+  <data>
+   <record model="ir.ui.view" id="instituo_ej4.list_cicleformatiu">
+      <field name="name">instituo_ej4 list</field>
+      <field name="model">instituto.cicle</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="description"/>
+          <field name="modul_ids"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="instituo_ej4.action_window_cicleformatiu">
+      <field name="name">instituo_ej4 window</field>
+      <field name="res_model">instituto.cicle</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+  
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="instituo_ej4" id="instituo_ej4.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Cicle formatiu" id="instituo_ej4.menu_cicleformatiu" parent="instituo_ej4.menu_root" action = "instituo_ej4.action_window_cicleformatiu"/>
+
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="instituo_ej4.menu_1" parent="instituo_ej4.menu_root"/>
+    <menuitem name="Menu 2" id="instituo_ej4.menu_2" parent="instituo_ej4.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="instituo_ej4.menu_1_list" parent="instituo_ej4.menu_1"
+              action="instituo_ej4.action_window"/>
+    <menuitem name="Server to list" id="instituo_ej4" parent="instituo_ej4.menu_2"
+              action="instituo_ej4.action_server"/>
+-->
+  </data>
+</odoo>

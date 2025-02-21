@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="instituo_ej4.list_alumne">
+            <field name="name">instituo_ej4 list</field>
+            <field name="model">instituto.alumne</field>
+            <field name="arch" type="xml">
+              <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="modul_ids"/>
+              </tree>
+            </field>
+          </record>
+
+
+          <!-- actions opening views on models -->
+
+          <record model="ir.actions.act_window" id="instituo_ej4.action_window_alumne">
+            <field name="name">instituo_ej4 window</field>
+            <field name="res_model">instituto.alumne</field>
+            <field name="view_mode">tree,form</field>
+          </record>
+
+
+          <!-- server action to the one above -->
+
+
+
+
+          <!-- Top menu item -->
+
+          <menuitem name="instituo_ej4" id="instituo_ej4.menu_root"/>
+
+          <!-- menu categories -->
+
+          <menuitem name="Alumne" id="instituo_ej4.menu_alumne" parent="instituo_ej4.menu_root" action = "instituo_ej4.action_window_alumne"/>
+    </data>
+</odoo>
